@@ -36,38 +36,49 @@
         class Car {
             #image;
             #manufacturer;
+            #price;
             #html;
 
-            constructor(image, manufacturer) {
-                this._html = `<img src="images/${this._image}" /><br />Производитель: ${this._manufacturer}<br />`;
-                this._image = image;
-                this._manufacturer = manufacturer;
+            constructor(image, manufacturer, price) {
+                this.#image = image;
+                this.#price = price;
+                this.#manufacturer = manufacturer;
+                this.#html = `<img src="images/${this.#image}" /><br />Производитель: ${this.#manufacturer}<br />
+                              Price: ${this.#price}`;
             }
 
             get image() {
-                return this._image;
+                return this.#image;
             }
 
             set image(value) {
-                this._image = value;
+                this.#image = value;
             }
 
             get manufacturer() {
-                return this._manufacturer;
+                return this.#manufacturer;
             }
 
             set manufacturer(value) {
-                this._manufacturer = value;
+                this.#manufacturer = value;
+            }
+
+            get price() {
+                return this.#price;
+            }
+
+            set price(value) {
+                this.#price = value;
             }
 
             get html() {
-                return this._html;
+                return this.#html;
             }
         }
 
-        let car1 = new Car("audi-a6-250.jpg", "Audi");
-        let car2 = new Car("jaguar-x-type-250.jpg", "Jaguar");
-        let car3 = new Car("porsche-carrera-911-250.jpg", "Porsche");
+        let car1 = new Car("audi-a6-250.jpg", "Audi", 123432);
+        let car2 = new Car("jaguar-x-type-250.jpg", "Jaguar", 43242);
+        let car3 = new Car("porsche-carrera-911-250.jpg", "Porsche", 12323);
 
         let placeholder1 = document.querySelector("#placeholder1");
         let placeholder2 = document.querySelector("#placeholder2");
