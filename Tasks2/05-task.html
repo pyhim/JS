@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 05</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Задание:
+        Создайте класс Cone (конус), который будет расширять класс Circle (наследоваться от класса Circle), конструктор класса Cone должен принимать радиус и высоту конуса.
+        В классе Cone добавьте метод getVolume, который будет возвращать объем конуса и переопределите метод getArea таким образом, чтобы он вычислял площадь полной поверхности конуса.
+        По возможности используйте логику базового класса через ключевое слово super
+        */
+        class Circle {
+            #radius;
+
+            constructor(radius) {
+                this._radius = radius;
+            }
+
+            getArea() {
+                return Math.PI * Math.pow(this._radius, 2);
+            }
+
+            get radius() {
+                return this._radius;
+            }
+        }
+
+        class Cone extends Circle {
+            #height;
+
+            constructor(radius, height) {
+                super(radius);
+                this.#height = height;
+            }
+
+            getVolume() {
+                return this.#height / 3 * Math.PI * super.radius * super.radius;
+            }
+
+            getArea() {
+                return Math.PI * super.radius * (super.radius + this.#height);
+            }
+        }
+    </script>
+</body>
+
+</html>
