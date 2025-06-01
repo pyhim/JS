@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*text-align: right;*/
+}
+
+.text-inputs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.choice-inputs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}

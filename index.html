@@ -2,13 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="main.css">
   <title>Test</title>
 </head>
 <body>
-  <div id="block">
-    Hello!
-  </div>
-  <p>Hello World!</p>
+<div class="container">
+  <h3>Registration</h3>
+  <form name="registration">
+    <div class="text-inputs-container">
+      <div class="form-object">
+        <label for="username">Login:</label>
+        <input id="username" type="text">
+      </div>
+      <div class="form-object">
+        <label for="password">Password:</label>
+        <input id="password" type="password">
+      </div>
+      <div class="form-object">
+        <label for="confirm-password">Confirm Password:</label>
+        <input id="confirm-password" type="password">
+      </div>
+      <div class="form-object">
+        <label for="full-name">Full Name:</label>
+        <input id="full-name" type="text">
+      </div>
+    </div>
+    <div class="choice-inputs-container">
+      <div class="form-object">
+        <label for="gender">Gender:</label>
+        <select id="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
 </body>
 <script>
 
